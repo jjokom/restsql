@@ -13,7 +13,7 @@ app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'password'
 app.config['MYSQL_DATABASE_DB'] = 'ItemListDb'
 app.config['MYSQL_DATABASE_HOST'] = '172.16.0.18'
-app.config['MYSQL_DATABASE_PORT']=31165
+app.config['MYSQL_DATABASE_PORT']=31065
 
 
 mysql.init_app(app)
