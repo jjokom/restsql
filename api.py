@@ -2,6 +2,7 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask_restful import reqparse
 from flask.ext.mysql import MySQL
+import os
 
 
 
@@ -9,11 +10,11 @@ mysql = MySQL()
 app = Flask(__name__)
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'password'
+app.config['MYSQL_DATABASE_USER'] = os.environ["MYSQL_USER"]
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ["MYSQL_PASSWORD"]
 app.config['MYSQL_DATABASE_DB'] = 'ItemListDb'
-app.config['MYSQL_DATABASE_HOST'] = '172.16.0.18'
-app.config['MYSQL_DATABASE_PORT']=31065
+app.config['MYSQL_DATABASE_HOST'] = os.environ["MYSQL_URL"]
+app.config['MYSQL_DATABASE_PORT']=int(os.environ["MYSQL_PORT"])
 
 
 mysql.init_app(app)
