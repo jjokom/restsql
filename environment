@@ -1,0 +1,6 @@
+{
+MYSQL_USER":"root",
+"MYSQL_PASSWORD":"password",
+"MYSQL_URL":"mysql.demo.svc.cluster.local"
+"MYSQL_PORT":3306
+}
