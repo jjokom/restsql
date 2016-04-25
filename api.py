@@ -14,7 +14,7 @@ app.config['MYSQL_DATABASE_USER'] = os.environ["MYSQL_USER"]
 app.config['MYSQL_DATABASE_PASSWORD'] = os.environ["MYSQL_PASSWORD"]
 app.config['MYSQL_DATABASE_DB'] = 'ItemListDb'
 app.config['MYSQL_DATABASE_HOST'] = os.environ["MYSQL_URL"]
-app.config['MYSQL_DATABASE_PORT']=int(os.environ["MYSQL_PORT"])
+app.config['MYSQL_DATABASE_PORT']=os.environ["MYSQL_PORT"]
 
 
 mysql.init_app(app)
